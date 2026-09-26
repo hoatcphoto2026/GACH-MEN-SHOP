@@ -14,7 +14,7 @@
         <span class="brand-mark" aria-hidden="true"></span>
         <div>
           <h1>GẠCH MEN VIỆT</h1>
-          <p class="brand-tagline">Quản lý sản phẩm (máy của bạn)</p>
+          <p class="brand-tagline">Quản lý sản phẩm</p>
         </div>
       </a>
       <nav class="main-nav" aria-label="Điều hướng">
@@ -24,9 +24,29 @@
   </header>
 
   <main class="container admin-page">
-    <p class="server-banner" id="server-banner" hidden></p>
+    <section class="admin-access" id="login-panel" aria-labelledby="login-title">
+      <p class="eyebrow">Quản trị viên</p>
+      <h2 id="login-title">Đăng nhập để quản lý sản phẩm</h2>
+      <form id="login-form">
+        <label>
+          Email
+          <input type="email" id="login-email" autocomplete="username" required>
+        </label>
+        <label>
+          Mật khẩu
+          <input type="password" id="login-password" autocomplete="current-password" required>
+        </label>
+        <p class="form-status" id="login-status" role="status"></p>
+        <button type="submit" class="btn-primary" id="login-btn">Đăng nhập</button>
+      </form>
+    </section>
 
-    <section class="admin-layout">
+    <section class="admin-workspace" id="admin-workspace" hidden>
+      <div class="admin-toolbar">
+        <p class="form-status" id="workspace-status" role="status"></p>
+        <button type="button" class="btn-reset" id="logout-btn">Đăng xuất</button>
+      </div>
+      <div class="admin-layout">
       <form class="admin-form" id="product-form">
         <p class="eyebrow">Kho hàng</p>
         <h2 id="form-title">Thêm sản phẩm mới</h2>
@@ -62,8 +82,8 @@
         </label>
 
         <div class="dropzone" id="dropzone">
-          <input type="file" id="field-image" accept=".jpg,.jpeg,.png,.webp,.svg,image/jpeg,image/png,image/webp,image/svg+xml">
-          <p><strong>Kéo thả ảnh vào đây</strong> hoặc bấm để chọn file JPG/PNG</p>
+          <input type="file" id="field-image" accept=".jpg,.jpeg,.png,.webp,image/jpeg,image/png,image/webp">
+          <p><strong>Kéo thả ảnh vào đây</strong> hoặc bấm để chọn file JPG/PNG/WEBP</p>
           <p class="dropzone-hint">Tối đa 8MB</p>
           <img id="image-preview" alt="Xem trước ảnh" hidden>
         </div>
@@ -83,8 +103,6 @@
           <label>Bảo hành <input type="text" id="field-warranty" placeholder="5 năm"></label>
         </details>
 
-        <p class="form-status" id="form-status" role="status"></p>
-
         <div class="form-actions">
           <button type="submit" class="btn-primary" id="save-btn">Thêm sản phẩm</button>
           <button type="button" class="btn-reset" id="cancel-edit" hidden>Hủy sửa</button>
@@ -97,9 +115,11 @@
         <p class="result-count" id="admin-count"></p>
         <div class="admin-list" id="admin-list"></div>
       </section>
+      </div>
     </section>
   </main>
 
+  <script src="supabase-config.js"></script>
   <script src="admin.js"></script>
 </body>
 </html>
