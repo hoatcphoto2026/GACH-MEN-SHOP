@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quản lý sản phẩm — Gạch Men Việt</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Về trang cửa hàng">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <div>
+          <h1>GẠCH MEN VIỆT</h1>
+          <p class="brand-tagline">Quản lý sản phẩm (máy của bạn)</p>
+        </div>
+      </a>
+      <nav class="main-nav" aria-label="Điều hướng">
+        <a href="index.html">Xem cửa hàng</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container admin-page">
+    <p class="server-banner" id="server-banner" hidden></p>
+
+    <section class="admin-layout">
+      <form class="admin-form" id="product-form">
+        <p class="eyebrow">Kho hàng</p>
+        <h2 id="form-title">Thêm sản phẩm mới</h2>
+        <input type="hidden" id="editing-id">
+
+        <label>
+          Tên sản phẩm
+          <input type="text" id="field-name" required placeholder="VD: Gạch Vân Đá Carrara">
+        </label>
+
+        <div class="form-row">
+          <label>
+            Kích thước
+            <select id="field-size">
+              <option value="300x300mm">300x300mm</option>
+              <option value="400x400mm">400x400mm</option>
+              <option value="600x600mm" selected>600x600mm</option>
+              <option value="800x800mm">800x800mm</option>
+            </select>
+          </label>
+          <label>
+            Ứng dụng
+            <select id="field-usage">
+              <option value="Lát Nền">Lát Nền</option>
+              <option value="Ốp Tường">Ốp Tường</option>
+            </select>
+          </label>
+        </div>
+
+        <label>
+          Giá (đồng / m²)
+          <input type="number" id="field-price" required min="0" step="1000" placeholder="245000">
+        </label>
+
+        <div class="dropzone" id="dropzone">
+          <input type="file" id="field-image" accept=".jpg,.jpeg,.png,.webp,.svg,image/jpeg,image/png,image/webp,image/svg+xml">
+          <p><strong>Kéo thả ảnh vào đây</strong> hoặc bấm để chọn file JPG/PNG</p>
+          <p class="dropzone-hint">Tối đa 8MB</p>
+          <img id="image-preview" alt="Xem trước ảnh" hidden>
+        </div>
+        <input type="hidden" id="field-image-path">
+
+        <label>
+          Mô tả
+          <textarea id="field-description" rows="3" placeholder="Viết ngắn về bề mặt, không gian dùng..."></textarea>
+        </label>
+
+        <details class="extra-fields">
+          <summary>Thông số thêm (không bắt buộc)</summary>
+          <label>Bề mặt <input type="text" id="field-surface" placeholder="Bóng kiếng, nhám mờ..."></label>
+          <label>Chất liệu <input type="text" id="field-material" placeholder="Porcelain, ceramic..."></label>
+          <label>Quy cách <input type="text" id="field-perBox" placeholder="4 viên/thùng (1.44 m²)"></label>
+          <label>Xuất xứ <input type="text" id="field-origin" value="Việt Nam"></label>
+          <label>Bảo hành <input type="text" id="field-warranty" placeholder="5 năm"></label>
+        </details>
+
+        <p class="form-status" id="form-status" role="status"></p>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary" id="save-btn">Thêm sản phẩm</button>
+          <button type="button" class="btn-reset" id="cancel-edit" hidden>Hủy sửa</button>
+        </div>
+      </form>
+
+      <section aria-label="Danh sách đang bán">
+        <p class="eyebrow">Đang có trên website</p>
+        <h2>Sản phẩm</h2>
+        <p class="result-count" id="admin-count"></p>
+        <div class="admin-list" id="admin-list"></div>
+      </section>
+    </section>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>

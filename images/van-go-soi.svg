@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+  <rect width="120" height="120" fill="#c99b63"/>
+
+  <rect x="0" y="0" width="120" height="30" fill="#c99b63"/>
+  <line x1="0" y1="0" x2="120" y2="0" stroke="#8d6237" stroke-width="1" opacity=".5"/>
+  <path d="M0 7 Q 30 4.5 60 7 T 120 7" fill="none" stroke="#8d6237" stroke-width=".9" opacity=".35"/>
+  <path d="M0 15 Q 30 12.5 60 15 T 120 15" fill="none" stroke="#8d6237" stroke-width=".9" opacity=".35"/>
+  <path d="M0 23 Q 30 20.5 60 23 T 120 23" fill="none" stroke="#8d6237" stroke-width=".9" opacity=".35"/>
+
+  <rect x="0" y="30" width="120" height="30" fill="#b2814a"/>
+  <line x1="0" y1="30" x2="120" y2="30" stroke="#8d6237" stroke-width="1" opacity=".5"/>
+  <path d="M0 37 Q 30 34.5 60 37 T 120 37" fill="none" stroke="#8d6237" stroke-width=".9" opacity=".35"/>
+  <path d="M0 45 Q 30 42.5 60 45 T 120 45" fill="none" stroke="#8d6237" stroke-width=".9" opacity=".35"/>
+  <path d="M0 53 Q 30 50.5 60 53 T 120 53" fill="none" stroke="#8d6237" stroke-width=".9" opacity=".35"/>
+
+  <rect x="0" y="60" width="120" height="30" fill="#c99b63"/>
+  <line x1="0" y1="60" x2="120" y2="60" stroke="#8d6237" stroke-width="1" opacity=".5"/>
+  <path d="M0 67 Q 30 64.5 60 67 T 120 67" fill="none" stroke="#8d6237" stroke-width=".9" opacity=".35"/>
+  <path d="M0 75 Q 30 72.5 60 75 T 120 75" fill="none" stroke="#8d6237" stroke-width=".9" opacity=".35"/>
+  <path d="M0 83 Q 30 80.5 60 83 T 120 83" fill="none" stroke="#8d6237" stroke-width=".9" opacity=".35"/>
+
+  <rect x="0" y="90" width="120" height="30" fill="#b2814a"/>
+  <line x1="0" y1="90" x2="120" y2="90" stroke="#8d6237" stroke-width="1" opacity=".5"/>
+  <path d="M0 97 Q 30 94.5 60 97 T 120 97" fill="none" stroke="#8d6237" stroke-width=".9" opacity=".35"/>
+  <path d="M0 105 Q 30 102.5 60 105 T 120 105" fill="none" stroke="#8d6237" stroke-width=".9" opacity=".35"/>
+  <path d="M0 113 Q 30 110.5 60 113 T 120 113" fill="none" stroke="#8d6237" stroke-width=".9" opacity=".35"/>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+  <defs>
+    <g id="motif">
+      <rect width="60" height="60" fill="#f3ead7"/>
+      <path d="M0 0 H60 V60 H0 Z" fill="none" stroke="#2f5d62" stroke-width="3"/>
+      <path d="M60 0 A 60 60 0 0 1 0 60 Z" fill="#2f5d62" opacity=".9"/>
+      <circle cx="60" cy="60" r="22" fill="#f3ead7"/>
+      <circle cx="60" cy="60" r="12" fill="#c9a227"/>
+      <circle cx="12" cy="12" r="6" fill="#c9a227"/>
+    </g>
+  </defs>
+
+  <rect width="120" height="120" fill="#f3ead7"/>
+  <use href="#motif" x="0" y="0"/>
+  <use href="#motif" x="120" y="0" transform="scale(-1,1)"/>
+  <use href="#motif" x="0" y="120" transform="scale(1,-1)"/>
+  <use href="#motif" x="120" y="120" transform="scale(-1,-1)"/>
+</svg>
